@@ -1,88 +1,14 @@
-while in queue you can add new in list, but you can remove from list will not work.[FIXED]
-FIXED using     items_dict.clear()
-{'hydroid_prime_systems_blueprint': 3, 'ember_prime_systems_blueprint': None, 'ember_prime_blueprint': 8, 'protea_prime_blueprint': 7}
-list updated. #add volt_prime_blueprint to the list
-{'hydroid_prime_systems_blueprint': 3, 'ember_prime_systems_blueprint': None, 'ember_prime_blueprint': 8, 'protea_prime_blueprint': 7, 'volt_prime_blueprint': 95}
-list updated. #when protea_prime_blueprint deleted!
-{'hydroid_prime_systems_blueprint': 3, 'ember_prime_systems_blueprint': None, 'ember_prime_blueprint': 8, 'protea_prime_blueprint': 7, 'volt_prime_blueprint': 95}
-
-----
-
-in priceing tab when the button is started the |90 will make error & not gonna captured [fix that]
-
-
-----
-
-while in edit the list you can access the app & the app keep loading , also when clicked will show you not respoinding [FIXED]
-** tell user to stop then start to reload list
-To avoid blocking the main application while editing the list, you should open the list file in a separate process rather than a separate thread.
-This way, the application remains responsive even when the file is open in an editor.
-use subprocess
-
-
-def update_checking_list():
-    global items
-    # Get the directory of the current script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(script_dir, "list.txt")
-    try:
-        # Check if the file exists
-        if not os.path.exists(file_path):
-            # Create the file if it does not exist
-            with open(file_path, 'w') as file:
-                pass
-        # Open the file with Notepad in a separate process and wait for it to close
-        process = subprocess.Popen(["notepad", file_path])
-        // process.wait()  # Wait for Notepad to be closed
-    except Exception as e:
-        messagebox.showerror("Error", f"Failed to open list.txt: {e}")
-    
-    load_items_from_file()
-    print('list updated.')
-----
-
-
-while in edit list you can see the new hunt[FIXED]
-give Another proccess to the tab
-
-
-
-
------
-في وضع البيع يصير القيمة نفسها فما فوق 
-في وضع الشراء يصير القيمة نفسها فما تحت
-
-
-
-
-------------- 
-
-watcher
-
-[x]play sounds
-[]notification alert
-[]clear last result 
-[x]Double click copy to ONLY to BUY
-
-
-
-
-
-
 create new venv ( recommended )
 python3 -m venv wf
 
 source wf/bin/activate
 
-then 
+then
 pip install [pkg]
 #need to install
 python3-tkinter
 websockets
 requests
 pygame
-.... etc 
-
-
-
+.... etc
 
