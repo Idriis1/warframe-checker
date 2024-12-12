@@ -1,0 +1,3 @@
+volt_prime_systems_blueprint | 15 | 58 | 25
+volt_prime_neuroptics_blueprint | 20 | 85 | 36
+volt_prime_blueprint | 19 | 80 | 27

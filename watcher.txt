@@ -1,0 +1,5 @@
+abyssal_beacon|2
+glaive_prime_blade|48
+glaive_prime_disc|25
+mag_prime_systems_blueprint|15
+mag_prime_blueprint|39
